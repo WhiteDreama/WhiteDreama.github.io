@@ -11,7 +11,7 @@
 		<link type="text/css" rel="stylesheet" href="css/default.css">
 	</head>
 <body>
-<audio autoplay="autopaly">
+<audio id="video1" autoplay="autopaly">
 <source src="music/bgm.mp3" type="audio/mp3" />
 </audio>
 <div id="main">
@@ -59,6 +59,14 @@
     <script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="js/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/love.js" charset="utf-8"></script>
+    <script>
+        document.body.addEventListener('mousedown', function() {
+            var video1 = document.getElementById("video1")
+            video1.muted = false;
+            video1.load();
+            video1.play();
+        }, false);
+    </script>
     <script>
         (function(){
             var canvas = $('#canvas');
